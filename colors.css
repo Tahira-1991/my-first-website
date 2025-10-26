@@ -1,0 +1,189 @@
+/* Custom Colr  */
+:root {
+    --primary-brand: #908398;
+    --secondary-brand: #c3b8c5; 
+    --light-brand: #F3E5F5; 
+    --text-dark: #ebe2e9;
+    --text-white: #FFFFFF;
+}
+
+body {
+ padding-top: 80px; 
+    margin: 0;
+    font-family: 'Poppins', sans-serif; 
+    background-color: var(--light-brand);
+    color: var(--text-dark);
+}
+
+
+.bg-primary-brand { background-color: var(--primary-brand) !important; }
+.bg-secondary-brand { background-color: var(--secondary-brand) !important; }
+.bg-light-brand { background-color: var(--light-brand) !important; }
+.text-primary-brand { color: var(--primary-brand) !important; }
+.btn-primary-brand {
+    background-color: var(--primary-brand);
+    border-color: var(--primary-brand);
+    color: var(--text-white);
+}
+.btn-secondary-brand {
+    background-color: var(--secondary-brand);
+    border-color: var(--secondary-brand);
+    color: var(--text-white);
+    transition: all 0.3s ease;
+}
+.btn-secondary-brand:hover {
+    background-color: var(--primary-brand);
+    border-color: var(--primary-brand);
+    transform: translateY(-2px);
+}
+
+
+
+nav.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  background-color: #fff; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.hero {
+    min-height: 20vh; 
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.brush-1 {
+    background-color: var(--text-dark);
+    color: rgb(23, 22, 22);
+}
+
+
+.img img {
+    max-width: 200%;
+   
+    height: 480px; 
+    object-fit: cover;
+    border: 5px solid var(--secondary-brand);
+    transition: transform 0.5s ease;
+}
+
+.img img:hover {
+    transform: scale(1.05);
+}
+
+
+.grid-gallery {
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fit, minmax(120px, 2fr));
+    gap: 15px;
+}
+
+.grid-gallery img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: zoom-in;
+}
+
+.grid-gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+    .grid-gallery {
+        grid-template-columns: repeat(4, 2fr);
+    }
+    .pic-1 { grid-column: span 2; }
+    .pic-3 { grid-row: span 2; }
+    .pic-7 { grid-column: span 2; }
+    
+    .grid-gallery img {
+        height: 250px; 
+    }
+}
+
+
+.box {
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.carousel-inner img {
+    max-height: 450px;
+    object-fit: cover;
+}
+
+
+/* 4. Srvic Sec*/
+
+.child-card {
+    width: 150px;
+    height: 150px;
+    border: 3px solid var(--light-brand);
+    transition: transform 0.3s ease;
+}
+
+.child-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.child-card:hover {
+    transform: scale(1.1);
+    border-color: var(--text-dark);
+}
+
+
+/* Slidr */
+
+.slider-container {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.slider {
+    display: flex;
+    width: calc(250px * 10); /* Total width for all images */
+    animation: slide 15s linear infinite;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Move exactly half the width */
+}
+
+.slider img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+@media (max-width: 576px) {
+    .slider img {
+        width: 150px;
+        height: 150px;
+    }
+    .slider {
+        width: calc(150px * 10);
+    }
+}
+
+
+.footer-box {
+    transition: background-color 0.3s ease;
+}
+
+.footer-box:hover {
+    background-color: var(--secondary-brand);
+}
